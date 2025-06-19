@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socials | Ayaz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" /> <!-- Link to global styles FIRST -->
+  <link rel="stylesheet" href="socials.css" /> <!-- Then link to page-specific styles -->
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">Portfolio</a>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="socials.html" class="active">Socials</a>
+    </nav>
+    <div id="menu-icon" class="fas fa-bars"></div> <!-- Hamburger menu icon -->
+  </header>
+
+  <section class="socials">
+    <h1>Connect With Me</h1>
+    <p>Follow me on my official handles for updates, projects, and collabs</p>
+    <div class="icon-container">
+      <a href="#" target="_blank" class="icon-box"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ayaz6460" target="_blank" class="icon-box"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/notayaz07" target="_blank" class="icon-box"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/iam_ayaz.07" target="_blank" class="icon-box"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('fa-times');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css"> <!-- Link to global styles FIRST -->
+  <link rel="stylesheet" href="contact.css"> <!-- Then link to page-specific styles -->
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">Portfolio</a>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="socials.html">Socials</a>
+    </nav>
+    <div id="menu-icon" class="fas fa-bars"></div> <!-- Hamburger menu icon -->
+  </header>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:Hey@iamayaz.tech" style="color:#b74b4b">Hey@iamayaz.tech</a></p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('fa-times');
+    });
+  </script>
+</body>
+
+</html>

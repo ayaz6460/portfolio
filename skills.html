@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="skills.css">
-    <title>Skills</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Link to global styles FIRST -->
+  <link rel="stylesheet" href="skills.css"> <!-- Then link to page-specific styles -->
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Webpage</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="skills.html" class="active">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experience.html">Experience</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <a href="index.html" class="logo">Portfolio</a>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html" class="active">Skills</a>
+     <a href="projects.html">Projects</a>
+       <a href="contact.html">Contact</a>
+       <a href="socials.html">Socials</a>
+    </nav>
+    <div id="menu-icon" class="fas fa-bars"></div> <!-- Hamburger menu icon -->
+  </header>
 
-    <section class="skills">
-        <h1>My <span>Skills</span></h1>
-        <div class="skills-container">
-            <div class="skill-box">
-                <i class="fa-brands fa-html5"></i>
-                <h3>HTML5</h3>
-                <p>Skilled in building semantic, accessible, and responsive web structures.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-css3-alt"></i>
-                <h3>CSS3</h3>
-                <p>Expert in designing responsive layouts and animations using CSS.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-js"></i>
-                <h3>JavaScript</h3>
-                <p>Strong proficiency in writing dynamic and interactive front-end functionality.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-react"></i>
-                <h3>React</h3>
-                <p>Experience in building modern, component-based web applications using React.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-python"></i>
-                <h3>Python</h3>
-                <p>Capable of building backend applications and scripts with Python.</p>
-            </div>
-            <div class="skill-box">
-                <i class="fa-brands fa-node"></i>
-                <h3>Node.js</h3>
-                <p>Skilled in developing scalable backend services using Node.js and Express.js.</p>
-            </div>
-        </div>
-    </section>
+  <section class="skills">
+    <h1>My Skills</h1>
+    <div class="skill-container">
+      <div class="skill">
+        <i class="fas fa-gamepad"></i>
+        <h2>Game Dev</h2>
+        <p>Unity, C#, Unreal Engine</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-mobile-alt"></i>
+        <h2>App Dev</h2>
+        <p>Flutter, Kotlin, Swift</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-java"></i>
+        <h2>Java</h2>
+        <p>OOP, Spring Boot, JavaFX</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-code"></i>
+        <h2>C++</h2>
+        <p>STL, DSA, Competitive Coding</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-python"></i>
+        <h2>Python</h2>
+        <p>Flask, Django, Automation</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-globe"></i>
+        <h2>Web Dev</h2>
+        <p>HTML, CSS, JS, React</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('fa-times');
+    });
+  </script>
 </body>
 </html>

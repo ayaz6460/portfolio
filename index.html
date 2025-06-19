@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Webpage</a>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Portfolio</a>
+    <nav id="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="socials.html">Socials</a>
+    </nav>
+    <div id="menu-icon" class="fas fa-bars"></div> <!-- Hamburger menu icon -->
+  </header>
 
-        <nav>
-            <a href="index.html" class="active"> Home</a>
-            <a href="services.html" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hi, It's <span>Ayaz</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sapiente! Illum, blanditiis animi. Mollitia, dolor repellendus fuga ab sequi libero voluptatem nemo voluptatibus quidem ut? Ratione aperiam error ut quam?
-            Accusamus fuga voluptas officiis aliquam maiores dicta. Odit iure vero harum incidunt obcaecati quaerat debitis sapiente hic cumque quis exercitationem vitae perferendis accusantium a, maxime tempora dicta ullam praesentium facilis.
-        </p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <a href="#" class="btn">Hire me</a>
-        </div>
-    </section>
+  <!-- Home Section -->
+  <section class="home">
+    <div class="home-content">
+      <h1>Hi, It's <span>Ayaz</span></h1>
+      <h3 class="typing-text">I'm a <span class="text-animation"></span></h3> <!-- Added class for typing animation target -->
+      <p>
+        I'm a passionate full-stack developer and tech enthusiast from India, currently pursuing Computer Science. I build smart, user-friendly websites and automation tools that make life easier — like AI voice assistants for colleges, payment portals, and event platforms. With a strong grip on Supabase, Vapi.ai, Cashfree, and modern web design, I'm on a mission to create impactful digital solutions and scale them to millions.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/ayaz6460" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/notayaz07" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/iam_ayaz.07" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <a href="#" class="btn">Hire me</a>
+    </div>
+    <div class="home-img">
+      <img src="main.jpg" alt="Profile Image" />
+    </div>
+  </section>
+
+  <!-- JavaScript for mobile menu toggle -->
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('fa-times'); // Changes hamburger to 'X' icon
+    });
+  </script>
+
+  <!-- Typed.js for the typing animation -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    // Initialize Typed.js for the typing animation
+    var typed = new Typed('.text-animation', {
+      strings: ["Full-Stack Developer", "Devloper", "Student" , "Freelancer" , "Game Devloper" ], // Words to type out
+      typeSpeed: 100, // Speed of typing
+      backSpeed: 50, // Speed of deleting
+      backDelay: 1000, // Delay before deleting
+      loop: true // Loop the animation indefinitely
+    });
+  </script>
 </body>
 </html>

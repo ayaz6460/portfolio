@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Link to global styles FIRST -->
+  <link rel="stylesheet" href="projects.css"> <!-- Then link to page-specific styles -->
+  <title>Projects</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">Portfolio</a>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+       <a href="projects.html" class="active">Projects</a>
+       <a href="contact.html">Contact</a>
+       <a href="socials.html">Socials</a>
+    </nav>
+    <div id="menu-icon" class="fas fa-bars"></div> <!-- Hamburger menu icon -->
+  </header>
+
+  <section class="projects"> <!-- Class remains 'projects' -->
+    <h1>My <span>Projects</span></h1>
+    <div class="project-container"> <!-- Class remains 'project-container' -->
+      <div class="project-item"> <!-- Class remains 'project-item' -->
+        <i class="fas fa-robot"></i>
+        <h2>Call Assistant</h2>
+        <p>Human-like voice assistant using Vapi.ai to call parents and notify them about student absences in multiple languages.</p>
+      </div>
+
+      <div class="project-item">
+        <i class="fas fa-coins"></i>
+        <h2>Fee Portal</h2>
+        <p>Automated payment portal with Supabase + Cashfree, PDF receipts with QR codes, and real-time payment status.</p>
+      </div>
+
+      <div class="project-item">
+        <i class="fas fa-graduation-cap"></i>
+        <h2>EduGenie Bot</h2>
+        <p>24/7 Telegram AI chatbot for educational queries and student assistance integrated with smart reply.</p>
+      </div>
+
+      <div class="project-item">
+        <i class="fas fa-laptop-code"></i>
+        <h2>Hackathon Platform</h2>
+        <p>Interactive web app for managing college hackathons including event listing, registration, and payment flows.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('fa-times');
+    });
+  </script>
+</body>
+
+</html>
